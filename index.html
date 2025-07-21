@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de JSON em Tabela</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <header class="text-center mb-4">
+            <h1>Editor de JSON em Tabela</h1>
+            <p class="lead">Carregue, visualize, edite e salve arquivos JSON de forma fácil.</p>
+        </header>
+
+        <div class="card bg-light p-4 mb-4" id="drop-zone">
+            <div class="text-center">
+                <p class="m-0">Arraste e solte um arquivo .json aqui ou clique no botão para selecionar</p>
+                <input type="file" id="file-input" accept=".json" class="d-none">
+                <button id="load-button" class="btn btn-primary mt-2">Carregar Arquivo JSON</button>
+            </div>
+        </div>
+
+        <div id="error-alert" class="alert alert-danger d-none" role="alert"></div>
+
+        <div id="table-toolbar" class="d-flex justify-content-between align-items-center mb-2 d-none">
+            <div class="btn-group" role="group" aria-label="Controles da Fonte">
+                <button id="decrease-font-button" class="btn btn-secondary btn-sm">A-</button>
+                <button id="increase-font-button" class="btn btn-secondary btn-sm">A+</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Ações da Tabela">
+                <button id="add-row-button" class="btn btn-success">Adicionar Linha</button>
+                <button id="save-button" class="btn btn-info">Salvar JSON</button>
+            </div>
+        </div>
+        <div class="table-responsive d-none" id="table-container">
+            <table class="table table-bordered table-hover" id="json-table">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

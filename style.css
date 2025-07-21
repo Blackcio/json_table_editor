@@ -1,0 +1,52 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+#drop-zone {
+    border: 2px dashed #0d6efd;
+    border-radius: .5rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+#drop-zone.drag-over {
+    background-color: #e9ecef;
+    border-color: #0b5ed7;
+}
+
+#table-toolbar {
+    padding-bottom: 1rem;
+}
+
+.table-responsive {
+    max-height: 60vh;
+}
+
+td[contenteditable="true"] {
+    background-color: #f8f9fa;
+    outline: 2px solid transparent;
+    transition: outline 0.2s;
+}
+
+td[contenteditable="true"]:focus {
+    background-color: #fff;
+    outline: 2px solid #0d6efd;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+#json-table {
+    table-layout: fixed;
+}
+
+#json-table th {
+    position: relative;
+}
+
+.resize-handle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 5px;
+    cursor: col-resize;
+    user-select: none; /* Prevent text selection while dragging */
+}
